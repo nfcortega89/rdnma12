@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import TopMenu from './topMenu';
-import Nav from './nav';
+import Banner from './banner';
 
 const Application = styled.div`
   margin: 0;
@@ -14,7 +14,7 @@ class App extends Component {
     return (
       <Application>
         <TopMenu />
-        <Nav />
+        <Banner />
       </Application>
     );
   }

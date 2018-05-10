@@ -7,8 +7,15 @@ const Menu = styled.div`
   height: 10vh;
   padding: 0 6%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
+`;
+const Logo = styled.span`
+  color: white;
+  font-size: 14px;
+  text-transform: uppercase;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 600;
 `;
 const LinkBar = styled.ul`
   height: 100%;
@@ -48,9 +55,19 @@ const Link = styled.a`
 const TopMenu = () => {
   return (
     <Menu>
+      <Logo>Ortega Foundation</Logo>
       <LinkBar>
         <LinkItem>
-          <Link> Support</Link>
+          <Link> Home</Link>
+        </LinkItem>
+        <LinkItem>
+          <Link>Events</Link>
+        </LinkItem>
+        <LinkItem>
+          <Link> Causes</Link>
+        </LinkItem>
+        <LinkItem>
+          <Link> News</Link>
         </LinkItem>
         <LinkItem>
           <Link> About us</Link>
