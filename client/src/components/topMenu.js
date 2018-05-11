@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
 
 const Menu = styled.div`
@@ -52,32 +52,32 @@ const Link = styled.a`
     cursor: pointer;
   }
 `;
-const TopMenu = () => {
-  return (
-    <Menu>
-      <Logo>Ortega Foundation</Logo>
-      <LinkBar>
+
+class TopMenu extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      links: ['Home', 'Events', 'Causes', 'News', 'About us', 'Donate now']
+    };
+    this.renderLinks = this.renderLinks.bind(this);
+  }
+  renderLinks() {
+    return this.state.links.map(link => {
+      return (
         <LinkItem>
-          <Link> Home</Link>
+          <Link>{link}</Link>
         </LinkItem>
-        <LinkItem>
-          <Link>Events</Link>
-        </LinkItem>
-        <LinkItem>
-          <Link> Causes</Link>
-        </LinkItem>
-        <LinkItem>
-          <Link> News</Link>
-        </LinkItem>
-        <LinkItem>
-          <Link> About us</Link>
-        </LinkItem>
-        <LinkItem>
-          <Link> Donate now</Link>
-        </LinkItem>
-      </LinkBar>
-    </Menu>
-  );
-};
+      );
+    });
+  }
+  render() {
+    return (
+      <Menu>
+        <Logo>Ortega Foundation</Logo>
+        <LinkBar>{this.renderLinks()}</LinkBar>
+      </Menu>
+    );
+  }
+}
 
 export default TopMenu;

@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import Ortega from '../assets/ortegas.JPG';
 
 const Picture = styled.div`
-  background-image: url(${Ortega});
+  background-image: url();
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 13%;
@@ -13,6 +12,10 @@ const Picture = styled.div`
 `;
 const TagLine = styled.h1`
   position: absolute;
+  bottom: 20px
+  right: 0;
+  left: 0;
+  margin: 0 auto;
 `;
 const Banner = () => {
   return (

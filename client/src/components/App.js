@@ -14,7 +14,7 @@ class App extends Component {
     return (
       <Application>
         <TopMenu />
-        <Banner />
+        {/* <Banner /> */}
       </Application>
     );
   }
