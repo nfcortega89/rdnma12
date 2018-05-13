@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import Charity from '../assets/charity.jpg';
 
 const Picture = styled.div`
-  background-image: url();
+  background-image: url(${Charity});
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 13%;
