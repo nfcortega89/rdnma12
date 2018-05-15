@@ -41,7 +41,7 @@ const Link = styled.a`
   padding: 14px;
   font-weight: 600;
   height: 100%;
-  font-size: 12px;
+  font-size: 14px;
   color: white;
   display: flex;
   justify-content: center;
